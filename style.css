@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrollbar on small screens */
+}
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  z-index: 2;
+  transition: 1s;
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+  
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #282829;
+  mix-blend-mode: overlay;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+  text-align: center; /* Center align the text on small screens */
+}
+
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 5em;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+.social {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  margin-right: 40px;
+ 
+}
+
+/*.social li#f a:hover {*/
+/*  transform: scale(2) translateY(-20px);*/
+/*}*/
+
+/*.social li#t a:hover {*/
+/*  transform: scale(2) translateY(-10px); */
+/*}*/
+
+/*.social li#i a:hover {*/
+/*  transform: scale(2) translateY(-10px); */
+/*}*/
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  position: relative;
+}
+
+.menu ul li {
+  list-style: none;
+  margin: 60px;
+  cursor: pointer;
+}
+
+.menu ul li:hover {
+  transform: scale(1.3, 2) translateZ(15px);
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+
+.menu ul li a:hover {
+  color: #111;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .showcase {
+    padding: 40px;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .text h2 {
+    font-size: 3em;
+  }
+
+  .text h3 {
+    font-size: 2em;
+  }
+
+  .text p {
+    font-size: 1em;
+    max-width: 100%;
+  }
+
+  .menu {
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu.active {
+    display: flex;
+  }
+  .menu ul li {
+    margin: 20px; /* Reduce the margin for mobile */
+  }
+
+  .menu ul li a {
+    font-size: 24px; /* Adjust font size for mobile */
+    color: #fff; /* Change the text color */
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 0; 
+  }
+
+  .toggle {
+     display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-size: 20px;
+    z-index: 2;
+  }
+
+  /*.social li a {*/
+  /*  transform: scale(1, 2);*/
+  /*  margin-right: 20px;*/
+  /*}*/
+
+  .logo {
+    font-size: 24px;
+  }
+
+  /* Add any other mobile-specific styles here */
+}

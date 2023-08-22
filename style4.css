@@ -1,0 +1,5 @@
+.bg-header {
+    background: url(images/parallax8.jpg) center center no-repeat;
+    /* width: 100%; */
+    background-attachment: fixed;
+  }

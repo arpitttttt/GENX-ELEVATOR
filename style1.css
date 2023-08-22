@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+  #mobile-menu {
+    display: none;
+  }
+}
+
+.bg-header {
+    background: url(images/parallax4.jpg) center center no-repeat;
+    /* width: 100%; */
+    background-attachment: fixed;
+  }

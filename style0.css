@@ -1,0 +1,10 @@
+.bg-header {
+    background: url(images/parallax.jpg) center center no-repeat;
+    /* width: 100%; */
+    background-attachment: fixed;
+  }
+  
+  .bg-quote {
+    background: url(images/parallax4.jpg) center center no-repeat;
+    background-attachment: fixed;
+  }
